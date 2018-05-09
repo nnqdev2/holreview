@@ -1,0 +1,30 @@
+export class LustSearchFilter {
+    logNumber: string;
+    logCounty: string;
+    logYear: string;
+    logSeqNbr: string;
+    facilityId: number;
+    siteName: string;
+    siteAddress: string;
+    siteCity: string;
+    siteZipcode: number;
+    regionName: string;
+    regionCode: string;
+    regInd: boolean;
+    hotInd: boolean;
+    hotAuditReject: boolean;
+    siteType: number;
+    siteStatus: number;
+    compareDt1Idx: number;
+    fromDate1: string;
+    toDate1: string;
+    compareDt2Idx: number;
+    fromDate2: string;
+    toDate2: string;
+    projectMananger: string;
+    contactFirstName: string;
+    contactLastName: string;
+    contactOrgName: string;
+    lustId: number;
+    releaseType: string;
+}

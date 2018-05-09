@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>HOL Review</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+
+    </head>
+
+    <body>
+
+       
+    <!-- table lustReportingTable  -->
+        <!-- <table id="lustReportingTable"> -->
+            <div class="container-fluid">   
+                <div class="row">
+                    <p class="display-5 text-left m-4">LUST Search</p>
+                </div>
+                <!-- <div class="form-row mt-4 container-fluid"></div> -->
+                <div class="form-row mt-1 container-fluid">
+                   <!-- Form lustSearchForm begins -->
+                    <form [formGroup]="lustSearchFilterForm" class="form" role="form" autocomplete="off" method="POST"  (ngSubmit)="submitLustSearch()">
+                        <!--logNbr thru  zipCode -->
+                        <div class="form-row ">
+                            <!-- Log Number: -->   
+                            <div class="form-group col-sm-3 pb-2">                    
+                                <label class="control-label" for="logCounty,logYear,logSeqNbr">Log Nbr (county/yr/nbr)</label>   
+                                <div class="form-row">
+                                    <div class="form-group col-sm-3 pb-2"> 
+                                        <input formControlName="logCounty" type="text" class="form-control" id="logCounty" placeholder=""  />
+                                    </div>
+                                    <div class="form-group col-sm-3 pb-2"> 
+                                        <input formControlName="logYear" type="text" class="form-control" id="logYear" placeholder=""  />
+                                    </div>
+                                    <div class="form-group col-sm-6 pb-2"> 
+                                        <input formControlName="logSeqNbr" type="text" class="form-control" id="logSeqNbr" placeholder=""  />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Log Number: -->  
+                            <!-- facilityId -->                      
+                                
+                            <div class="form-group col-sm-2 pb-2"> 
+                                <label class="control-label" for="facilityId">Facility Id</label> 
+                                <input formControlName="facilityId" type="text" class="form-control" id="facilityId" placeholder=""  />
+                            </div>
+                            <!-- /facilityId --> 
+                            <!-- projectManager -->  
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="projectManager">PrjMgr</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="projectManager" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Donald Duck</option>
+                                            <option value="2">Minnie Mouse</option>
+                                            <option value="3">Road Runner</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /projectManager -->   
+                            <!-- region -->  
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="region">Region</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="region" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Region 1</option>
+                                            <option value="2">Region 2</option>
+                                            <option value="3">Region 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /region -->   
+                            <!-- zipCode -->  
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="zipCode">Zip</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="zipCode" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">11111</option>
+                                            <option value="2">22222</option>
+                                            <option value="3">33333</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /zipCode --> 
+                        </div>
+                        <!--/logNbr thru  /zipCode -->
+                        <!--siteName county -->
+                        <div class="form-row ">
+                            <!-- siteName: -->   
+                            <div class="form-group col-md-9 pb-2">                    
+                                <label class="control-label" for="siteName">Site Name</label>   
+                                <div class="form-group "> 
+                                    <input formControlName="siteName" type="text" class="form-control" id="siteName" placeholder=""  />
+                                </div>
+                            </div>
+                            <!-- /siteName: -->
+                            <!-- county -->  
+                            <div class="form-group col-sm-2 pb-1">
+                                <label  class="control-label" for="county">County</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="county" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">County 1</option>
+                                            <option value="2">County 2</option>
+                                            <option value="3">County 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /county -->   
+                        </div>
+                        <!--/siteName /county --> 
+                        <!--siteAdrress city --> 
+                        <div class="form-row ">
+                            <!-- siteAdrress: -->   
+                            <div class="form-group col-md-9 pb-2">                    
+                                <label class="control-label" for="siteAdrress">Site Address</label>   
+                                <div class="form-group "> 
+                                    <input formControlName="siteName" type="text" class="form-control" id="siteAdrress" placeholder=""  />
+                                </div>
+                            </div>
+                            <!-- /siteAdrress: -->
+                            <!-- city -->  
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="city">City</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="city" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">City11111</option>
+                                            <option value="2">City22222</option>
+                                            <option value="3">City33333</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /city --> 
+                        </div>
+                        <!--/siteAdrress /city --> 
+
+                        <div class="form-row ">
+                            <!-- releaseType: -->   
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="releaseType">Release Type</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="releaseType" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Regulated</option>
+                                            <option value="2">UnRegulated</option>
+                                            <option value="3">HOT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /releaseType: -->
+                            <!-- siteType: -->   
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="siteType">Site Type</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="siteType" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Generic Remedy</option>
+                                            <option value="2">Groundwater</option>
+                                            <option value="3">Low Impact Site</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /siteType: -->
+                            <!-- fileStatus: -->   
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="fileStatus">File Status</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="fileStatus" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">fileStatus Remedy</option>
+                                            <option value="2">fileStatus Groundwater</option>
+                                            <option value="3">fileStatus Low Impact Site</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /fileStatus: -->
+                        </div>
+                        <div class="form-row ">
+                            <!-- contactFirstName: -->   
+                            <div class="form-group col-md-4 pb-2">                    
+                                <label class="control-label" for="contactFirstName">Contact First Name</label>   
+                                <div class="form-group "> 
+                                    <input formControlName="contactFirstName" type="text" class="form-control" id="contactFirstName" placeholder=""  />
+                                </div>
+                            </div>
+                            <!-- /contactFirstName: -->
+                            <!-- contactLastName: -->   
+                            <div class="form-group col-md-4 pb-2">                    
+                                <label class="control-label" for="contactLastName">Contact Last Name</label>   
+                                <div class="form-group "> 
+                                    <input formControlName="contactLastName" type="text" class="form-control" id="contactLastName" placeholder=""  />
+                                </div>
+                            </div>
+                            <!-- /contactLastName: -->
+                            <!-- contactOrgName: -->   
+                            <div class="form-group col-md-4 pb-2">                    
+                                <label class="control-label" for="contactOrgName">Contact Org Name</label>   
+                                <div class="form-group "> 
+                                    <input formControlName="contactOrgName" type="text" class="form-control" id="contactOrgName" placeholder=""  />
+                                </div>
+                            </div>
+                            <!-- /contactOrgName: -->
+                        </div>
+                        <div class="form-row ">
+                            <!-- compareDt1Idx -->  
+                            <div class="form-group col-sm-2 pb-2">
+                                <label  class="control-label" for="city">Date Name 1</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="compareDt1Idx" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Received</option>
+                                            <option value="2">Cleanup Started</option>
+                                            <option value="3">Release Stopped</option>
+                                            <option value="4">Final Invoice Rqst</option>
+                                            <option value="5">Closed</option>
+                                            <option value="6">Letter of Agreement</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /dateName1 --> 
+                            <!-- fromDate1: -->   
+                            <div class="input-group">
+                                <label class="control-label col-12" for="fromDate1">From Date</label>
+                                <input class="form-control col-md-4" 
+                                    name="dp1" formControlName="fromDate1" id="fromDate1" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                                    <img src="./assets/images/calendar.png" />
+                                </button>
+                                </div>
+                            </div>
+                            <!-- /fromDate1: -->
+                            <!-- toDate1: -->   
+                            <div class="input-group">
+                                <label class="control-label col-12" for="toDate1">From Date</label>
+                                <input class="form-control col-md-4" 
+                                    name="dp2" formControlName="toDate1" id="toDate1" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                                    <img src="./assets/images/calendar.png" />
+                                </button>
+                                </div>
+                            </div>
+                            <!-- /toDate1: -->
+                        </div>
+
+                    <div class="form-row ">
+                        <!-- siteName: -->   
+                        <div class="form-group col-md-6 pb-2">                    
+                            <label class="control-label" for="siteName">Site Name</label>   
+                            <div class="form-group "> 
+                                <input formControlName="siteName" type="text" class="form-control" id="siteName" placeholder=""  />
+                            </div>
+                        </div>
+                        <!-- /siteName: -->
+                    </div>
+                    <div class="col-md-6 pb-3">
+                        <div class="form-group small">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> Regulated
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> UnRegulated
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> HOT
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Red
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline disabled">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled=""> Green
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+ 
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <button type="submit" class="btn btn-success btn-md btn-block" [disabled]="!lustSearchFilterForm.valid">Submit</button>
+                            <!-- <button type="submit" class="btn btn-success btn-md btn-block" [disabled]="!incidentForm.valid">Submit</button> -->
+                            <!-- <button type="submit" class="btn btn-success btn-md btn-block" >Submit</button> -->
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="button" class="btn btn-default btn-md btn-block" (click)="populateTestData()">Populate Test Data</button>
+                        </div>
+                    </div>
+
+                    <pre>lustSearchFilterForm: {{ lustSearchFilterForm.value | json }}</pre>
+                </form>
+                <!-- Form lustSearchFilterForm ends --> 
+                </div>
+            </div> 
+
+    </body>
+
+
+</html>
