@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { httpInterceptorProviders } from './core/http-interceptors/index';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 
@@ -26,7 +27,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
