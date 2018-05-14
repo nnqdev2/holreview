@@ -1,4 +1,4 @@
-export class LustSearchFilter {
+export class LustSearchResult {
     lustId: number;
     logNumber: string;
     siteName: string;

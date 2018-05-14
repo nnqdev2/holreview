@@ -4,6 +4,7 @@
         <title>HOL Review</title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         
 
     </head>
@@ -15,25 +16,25 @@
         <!-- <table id="lustReportingTable"> -->
             <div class="container-fluid">   
                 <div class="row">
-                    <p class="display-5 text-left m-4">LUST Search</p>
+                    <h2 class="display-5 text-left m-4">LUST Search</h2>
                 </div>
                 <!-- <div class="form-row mt-4 container-fluid"></div> -->
                 <div class="form-row mt-1 container-fluid">
                    <!-- Form lustSearchForm begins -->
-                    <form [formGroup]="lustSearchFilterForm" class="form" role="form" autocomplete="off" method="POST"  (ngSubmit)="submitLustSearch()">
+                    <form [formGroup]="lustSearchFilterForm" class="form-group" role="form" autocomplete="off" method="POST"  (ngSubmit)="submitLustSearch()">
                         <!--logNbr thru  zipCode -->
                         <div class="form-row ">
                             <!-- Log Number: -->   
-                            <div class="form-group col-sm-3 pb-2">                    
+                            <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 pb-2">                    
                                 <label class="control-label" for="logCounty,logYear,logSeqNbr">Log Nbr (county/yr/nbr)</label>   
                                 <div class="form-row">
-                                    <div class="form-group col-sm-3 pb-2"> 
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 pb-2"> 
                                         <input formControlName="logCounty" type="text" class="form-control" id="logCounty" placeholder=""  />
                                     </div>
-                                    <div class="form-group col-sm-3 pb-2"> 
+                                    <div class="form-group col-sm-3 col-md-3 col-lg-3 col-xl-3 pb-2"> 
                                         <input formControlName="logYear" type="text" class="form-control" id="logYear" placeholder=""  />
                                     </div>
-                                    <div class="form-group col-sm-6 pb-2"> 
+                                    <div class="form-group col-sm-5 col-md-5 col-lg-5 col-xl-5 pb-2"> 
                                         <input formControlName="logSeqNbr" type="text" class="form-control" id="logSeqNbr" placeholder=""  />
                                     </div>
                                 </div>
@@ -50,7 +51,7 @@
                             <div class="form-group col-sm-2 pb-2">
                                 <label  class="control-label" for="projectManager">PrjMgr</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="projectManager" >
+                                    <select class="form-control" id="projectManager" formControlName="projectManager" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">Donald Duck</option>
                                             <option value="2">Minnie Mouse</option>
@@ -61,9 +62,9 @@
                             <!-- /projectManager -->   
                             <!-- region -->  
                             <div class="form-group col-sm-2 pb-2">
-                                <label  class="control-label" for="region">Region</label>
+                                <label  class="control-label" for="regionName">Region</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="region" >
+                                    <select class="form-control" id="regionName" formControlName="regionName" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">Region 1</option>
                                             <option value="2">Region 2</option>
@@ -76,7 +77,7 @@
                             <div class="form-group col-sm-2 pb-2">
                                 <label  class="control-label" for="zipCode">Zip</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="zipCode" >
+                                    <select class="form-control" id="zipCode" formControlName="siteZipcode" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">11111</option>
                                             <option value="2">22222</option>
@@ -99,9 +100,9 @@
                             <!-- /siteName: -->
                             <!-- county -->  
                             <div class="form-group col-sm-2 pb-1">
-                                <label  class="control-label" for="county">County</label>
+                                <label  class="control-label" for="siteCounty">County</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="county" >
+                                    <select class="form-control" id="siteCounty" formControlName="siteCounty" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">County 1</option>
                                             <option value="2">County 2</option>
@@ -124,9 +125,9 @@
                             <!-- /siteAdrress: -->
                             <!-- city -->  
                             <div class="form-group col-sm-2 pb-2">
-                                <label  class="control-label" for="city">City</label>
+                                <label  class="control-label" for="siteCity">City</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="city" >
+                                    <select class="form-control" id="siteCity" formControlName="siteCity" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">City11111</option>
                                             <option value="2">City22222</option>
@@ -143,7 +144,7 @@
                             <div class="form-group col-sm-2 pb-2">
                                 <label  class="control-label" for="releaseType">Release Type</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="releaseType" >
+                                    <select class="form-control" id="releaseType" formControlName="releaseType" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">Regulated</option>
                                             <option value="2">UnRegulated</option>
@@ -156,7 +157,7 @@
                             <div class="form-group col-sm-2 pb-2">
                                 <label  class="control-label" for="siteType">Site Type</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="siteType" >
+                                    <select class="form-control" id="siteType" formControlName="siteType" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">Generic Remedy</option>
                                             <option value="2">Groundwater</option>
@@ -169,7 +170,7 @@
                             <div class="form-group col-sm-2 pb-2">
                                 <label  class="control-label" for="fileStatus">File Status</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="fileStatus" >
+                                    <select class="form-control" id="fileStatus" formControlName="siteStatus" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">fileStatus Remedy</option>
                                             <option value="2">fileStatus Groundwater</option>
@@ -207,10 +208,10 @@
                         </div>
                         <div class="form-row ">
                             <!-- compareDt1Idx -->  
-                            <div class="form-group col-sm-2 pb-2">
+                            <div class="form-group col-lg-4 pb-2">
                                 <label  class="control-label" for="city">Date Name 1</label>
                                 <div class="input-group">
-                                    <select class="form-control" id="compareDt1Idx" >
+                                    <select class="form-control" id="compareDt1Idx" formControlName="compareDt1Idx" >
                                             <option selected="selected" value=""></option>
                                             <option value="1">Received</option>
                                             <option value="2">Cleanup Started</option>
@@ -223,89 +224,106 @@
                             </div>
                             <!-- /dateName1 --> 
                             <!-- fromDate1: -->   
-                            <div class="input-group">
-                                <label class="control-label col-12" for="fromDate1">From Date</label>
-                                <input class="form-control col-md-4" 
-                                    name="dp1" formControlName="fromDate1" id="fromDate1" ngbDatepicker #d="ngbDatepicker">
-                                <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-                                    <img src="./assets/images/calendar.png" />
-                                </button>
+                            <div class="input-group col-lg-4 pb-2">
+                                <label class="control-label " for="fromDate1">From Date</label>
+                                <div class="input-group"></div>
+                                    <input class="form-control" 
+                                            name="dp1" formControlName="fromDate1" id="fromDate1" ngbDatepicker #d="ngbDatepicker">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                                            <img class="img-fluid dp"  src="./assets/images/calendar.png" />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /fromDate1: -->
                             <!-- toDate1: -->   
-                            <div class="input-group">
-                                <label class="control-label col-12" for="toDate1">From Date</label>
-                                <input class="form-control col-md-4" 
-                                    name="dp2" formControlName="toDate1" id="toDate1" ngbDatepicker #d="ngbDatepicker">
+                            <div class="input-group col-lg-4 pb-2">
+                                <label class="control-label " for="toDate1">To Date</label>
+                                <div class="input-group">
+                                <input class="form-control " 
+                                    name="dp2" formControlName="toDate1" id="toDate1" ngbDatepicker #e="ngbDatepicker">
                                 <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
-                                    <img src="./assets/images/calendar.png" />
+                                <button class="btn btn-outline-secondary" (click)="e.toggle()" type="button">
+                                    <img class="img-fluid dp"  src="./assets/images/calendar.png" />
                                 </button>
                                 </div>
                             </div>
                             <!-- /toDate1: -->
+
                         </div>
 
-                    <div class="form-row ">
-                        <!-- siteName: -->   
-                        <div class="form-group col-md-6 pb-2">                    
-                            <label class="control-label" for="siteName">Site Name</label>   
-                            <div class="form-group "> 
-                                <input formControlName="siteName" type="text" class="form-control" id="siteName" placeholder=""  />
+                        <div class="form-row ">
+                            <!-- compareDt1Idx -->  
+                            <div class="form-group col-lg-4 pb-2">
+                                <label  class="control-label" for="city">Date Name 2</label>
+                                <div class="input-group">
+                                    <select class="form-control" id="compareDt2Idx" formControlName="compareDt2Idx" >
+                                            <option selected="selected" value=""></option>
+                                            <option value="1">Received</option>
+                                            <option value="2">Cleanup Started</option>
+                                            <option value="3">Release Stopped</option>
+                                            <option value="4">Final Invoice Rqst</option>
+                                            <option value="5">Closed</option>
+                                            <option value="6">Letter of Agreement</option>
+                                    </select>
+                                </div>
                             </div>
+                            <!-- /dateName1 --> 
+                            <!-- fromDate1: -->   
+                            <div class="input-group col-lg-4 pb-2">
+                                <label class="control-label " for="fromDate2">From Date</label>
+                                <div class="input-group"></div>
+                                    <input class="form-control" 
+                                            name="dp3" formControlName="fromDate2" id="fromDate1" ngbDatepicker #x="ngbDatepicker">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" (click)="x.toggle()" type="button">
+                                            <img class="img-fluid dp"  src="./assets/images/calendar.png" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /fromDate1: -->
+                            <!-- toDate1: -->   
+                            <div class="input-group col-lg-4 pb-2">
+                                <label class="control-label " for="toDate2">To Date</label>
+                                <div class="input-group">
+                                <input class="form-control " 
+                                    name="dp4" formControlName="toDate2" id="toDate2" ngbDatepicker #y="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" (click)="y.toggle()" type="button">
+                                        <img class="img-fluid dp"  src="./assets/images/calendar.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- /toDate1: -->
+
                         </div>
-                        <!-- /siteName: -->
-                    </div>
-                    <div class="col-md-6 pb-3">
-                        <div class="form-group small">
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> Regulated
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> UnRegulated
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="Regulated" id="inlineRadio1" value="option1"> HOT
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Red
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline disabled">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled=""> Green
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+
+                        <ngb-alert *ngIf="!closed" [type]="warning" class="fade show hide-the" (close)="closed=true"><strong>{{ errorMsg }}</strong></ngb-alert>
+
+
+                        <!-- <div *ngIf="showErrors; then showErrors">  </div> 
+                            <ng-template #showErrors>
+                                <div class="row column">
+                                    <p>{{ errorMsg }}</p>
+                                </div>
+        
+                        </ng-template> -->
 
 
 
 
 
 
-
-
-
-
- 
                     <div class="form-group row">
-                        <div class="col-sm-3">
-                            <button type="submit" class="btn btn-success btn-md btn-block" [disabled]="!lustSearchFilterForm.valid">Submit</button>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <button type="submit" class="btn btn-success btn-md btn-block" >Search</button>
                             <!-- <button type="submit" class="btn btn-success btn-md btn-block" [disabled]="!incidentForm.valid">Submit</button> -->
                             <!-- <button type="submit" class="btn btn-success btn-md btn-block" >Submit</button> -->
                         </div>
                         <div class="col-sm-3">
-                            <button type="button" class="btn btn-default btn-md btn-block" (click)="populateTestData()">Populate Test Data</button>
+                            <button type="button" class="btn btn-default btn-md btn-block" (click)="resetForm()">Clear</button>
                         </div>
                     </div>
 
@@ -314,7 +332,10 @@
                 <!-- Form lustSearchFilterForm ends --> 
                 </div>
             </div> 
-
+            <div *ngIf="validForm; then showResults">  </div> 
+            <ng-template #showResults>
+                <app-search-results></app-search-results>
+            </ng-template>
     </body>
 
 

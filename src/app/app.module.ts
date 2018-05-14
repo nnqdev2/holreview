@@ -6,19 +6,22 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-// import { LustDataService } from './services/lust-data.service';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchFilterComponent
+    SearchFilterComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,

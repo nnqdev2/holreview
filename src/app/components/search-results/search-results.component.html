@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Lust Search Results</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+            <h2>My Heroes</h2>
+            <ul class="lustSearchResult">
+              <li *ngFor="let lustSearchResult of lustSearchResults"
+                [class.selected]="lustSearchResult === selectedlustSearchResult"
+                (click)="onSelect(lustSearchResult)">
+                <span class="badge">{{lustSearchResult.logNumber}}</span> {{lustSearchResult.siteName}}
+              </li>
+            </ul>
+       
+        <!-- <div class="container">
+                <h2>Hover Rows</h2>
+                <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Log Number</th>
+                        <th>Site Name</th>
+                        <th>Site Address</th>
+                        <th>FirDate</th>
+                        <th>ClosedDate</th>
+                        <th>FacilityId</th>
+                        <th>SiteScore</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div> -->
+
+    </body>
+
+
+</html>
