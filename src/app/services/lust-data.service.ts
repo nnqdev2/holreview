@@ -19,6 +19,8 @@ export class LustDataService {
   constructor(private http: HttpClient) {}
 
   search(lustSearchFilter: LustSearchFilter): Observable<LustSearchResult[]> {
+    console.log('****LustDataService.search');
+    console.log(lustSearchFilter);
     return this.http.post<LustSearchResult[]>(environment.olprrapi_review_search, lustSearchFilter);
   }
 }

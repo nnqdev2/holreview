@@ -49,6 +49,7 @@ export class SearchFilterComponent implements OnInit {
       console.log('** Search Filters entered:');
       console.log(this.lustSearchFilterForm);
       const p = Object.assign({}, this.lustSearchFilter, this.lustSearchFilterForm.value);
+      console.log(JSON.stringify(p));
       this.searchFilterService.submittedSearchFilter(p);
       this.validForm = true;
       this.showResults = true;
@@ -100,36 +101,36 @@ export class SearchFilterComponent implements OnInit {
 
   createLustSearchFilterForm() {
     this.lustSearchFilterForm = this.formBuilder.group({
-      // logNumber:  [''],
+      logNumber:  [''],
       logCounty:  [''],
       logYear:  [''],
       logSeqNbr:  [''],
-      facilityId:  [''],
+      facilityId:  ['1'],
       siteName:  [''],
       siteAddress:  [''],
       siteCity:  [''],
       siteZipcode:  [''],
       regionName:  [''],
       regionCode:  [''],
-      regInd:  [''],
-      hotInd:  [''],
-      hotAuditReject:  [''],
-      siteType:  [''],
-      siteStatus:  [''],
-      compareDt1Idx:  [''],
+      // regInd:  [''],
+      // hotInd:  [''],
+      // hotAuditReject:  [''],
+      siteType:  [1],
+      siteStatus:  [1],
+      compareDt1Idx:  [1],
       fromDate1:  [''],
       toDate1:  [''],
-      compareDt2Idx:  [''],
+      compareDt2Idx:  [2],
       fromDate2:  [''],
       toDate2:  [''],
       projectManager:  [''],
       contactFirstName:  [''],
       contactLastName:  [''],
       contactOrgName:  [''],
-      lustId:  [''],
+      // lustId:  [''],
       releaseType:  [''],
-      active:  [''],
-      closed:  [''],
+      // active:  [''],
+      // closed:  [''],
       siteCounty:  [''],
     }  );
     this.lustSearchFilterForm.patchValue({

@@ -19,23 +19,32 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
   subscription: Subscription;
 
   constructor(private lustDataService: LustDataService, private formBuilder: FormBuilder,
-    private searchFilterService: SearchFilterService) {}
+    private searchFilterService: SearchFilterService) {
+      console.log('****SearchResultsComponent  constructor()  ******');
+      console.log(this.lustSearchFilter);
+    }
 
 
 
   ngOnInit() {
+    console.log('**** SearchResultsComponent  ngOnInit()******');
     this.getLustSearchFilter();
     this.getLustSearchResults();
   }
 
   getLustSearchFilter() {
+    console.log('****SearchResultsComponent getLustSearchFilter() ******');
     this.subscription = this.searchFilterService.searchFilterSubmitted$.subscribe(
       lustSearchFilter => {
         this.lustSearchFilter = lustSearchFilter;
     });
+
+    console.log(this.lustSearchFilter);
   }
 
   getLustSearchResults() {
+    console.log('****SearchResultsComponent  getLustSearchResults()  ******');
+    console.log(this.lustSearchFilter);
     this.lustDataService.search(this.lustSearchFilter).subscribe(
       data => { this.lustSearchResults = data; },
       err => console.error(err)
