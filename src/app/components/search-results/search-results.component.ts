@@ -51,6 +51,10 @@ export class SearchResultsComponent implements OnInit, OnDestroy {
     );
   }
 
+  onSelect(lustSearchResult: LustSearchResult) {
+    console.log('Hello...........................');
+  }
+
   // createLustSearchResultForm() {
   //   this.lustSearchResultForm = this.formBuilder.group({
   //     lustId:  [''],
